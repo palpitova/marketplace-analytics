@@ -32,3 +32,6 @@ logs/
 # Сырые данные больших объёмов (если будут)
 data/
 *.csv.gz
+simulative_diploma.md
+server-info.txt
+notebooks/raw/
