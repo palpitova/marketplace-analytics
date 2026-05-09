@@ -14,6 +14,15 @@ from src.loader import load_date
 def main() -> None:
     """Загрузить вчерашний день."""
     load_dotenv()
+
+    logger.add(
+        "logs/daily_{time:YYYY-MM-DD}.log",
+        rotation="00:00",
+        retention="30 days",
+        compression="zip",
+        level="INFO",
+    )
+
     yesterday = date.today() - timedelta(days=1)
     yesterday_str = yesterday.isoformat()
 
